@@ -1,0 +1,88 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>Document</title>
+	<style>
+		* {
+			  -webkit-box-sizing: border-box;
+			     -moz-box-sizing: border-box;
+			                box-sizing: border-box;
+}
+		.wrap{
+			background-color: #eee;
+			border:1px solid #999;
+			padding:20px;
+			overflow: auto;
+			min-width: 600px;
+		}
+		.team{
+			width: 200px;
+			border: 1px solid #999;
+			background-color: #fff;
+			padding: 20px;
+			float: left;
+		}
+		.tleft{
+			float: left;
+		}
+		.tright{
+			float:left;
+			margin-left: 20px;
+		}
+		img{
+			height: 80px;
+			width:80px;
+			border: 1px solid #999;
+			background-color: #fff;
+		}
+		.teamIntroduce{
+			background-color: #fff;
+			padding: 20px;
+			border: 1px solid #999;
+			margin-left: 220px;
+			margin-right:140px;
+
+		}
+		.teamMember{
+			width: 120px;
+			background-color: #fff;
+			border: 1px solid #999;
+			float:right;
+			
+			
+		}
+		
+		.teamMember img{
+			border: 1px solid #999;
+			display: block;
+			margin: 20px;
+		}
+	</style>
+</head>
+<body>
+	<div class="wrap">
+		<div class="team">
+			<div class="tleft">
+				<img src="src/199093782991075608.jpg" alt="">
+			</div>
+			<div class="tright">
+				<span>JiaJia</span>
+			</div>
+		</div>	
+		<div class="teamMember">
+			<img src="src/199093782991075608.jpg" alt="">
+			<img src="src/199093782991075608.jpg" alt="">
+			<img src="src/199093782991075608.jpg" alt="">
+			<img src="src/199093782991075608.jpg" alt="">
+		</div>
+		<div class="teamIntroduce">
+			<p>这里是一大段介绍这里是一大段介绍这里是一大段介绍这里是一大段介绍这里是一大段介绍这里是一大段介绍这里是一大段介绍这里是一大段介绍这里是一大段介绍这里是一大段介绍这里是一大段介绍这里是一大段介绍这里是一大段介绍这里是一大段介绍这里是一大段介绍这里是一大段介绍</p>
+			<p>这里是一大段介绍这里是一大段介绍这里是一大段介绍这里是一大段介绍这里是一大段介绍这里是一大段介绍这里是一大段介绍这里是一大段介绍这里是一大段介绍这里是一大段介绍这里是一大段介绍这里是一大段介绍这里是一大段介绍这里是一大段介绍这里是一大段介绍这里是一大段介绍</p>
+			<p>这里是一大段介绍这里是一大段介绍这里是一大段介绍这里是一大段介绍这里是一大段介绍这里是一大段介绍这里是一大段介绍这里是一大段介绍这里是一大段介绍这里是一大段介绍这里是一大段介绍这里是一大段介绍这里是一大段介绍这里是一大段介绍这里是一大段介绍这里是一大段介绍</p>
+			
+		</div>
+		
+	</div>
+</body>
+</html>
