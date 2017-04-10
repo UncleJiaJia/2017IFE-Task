@@ -13,14 +13,16 @@ function leftDel(ele){//接受容器节点(父节点)
 		alert("没有节点可以删除")
 		return;
 	}
-	return ele.removeChild(ele.firstElementChild);
+	var num = ele.removeChild(ele.firstElementChild).innerHTML;
+	alert("删除"+num);
 }
 function rightDel(ele){//接受容器节点(父节点)
 	if(!ele.firstElementChild){
 		alert("没有节点可以删除")
 		return;
 	}
-	return ele.removeChild(ele.lastChild);
+	var num = ele.removeChild(ele.lastChild);
+	alert("删除"+num);
 	
 }
 function leftInsert(parentEle,newEle){//接受父节点，新子节点;
@@ -77,14 +79,12 @@ function addEvent(){
 	//为左侧出绑定事件
 	//var leftOut = $("leftOut");
 	leftOut.onclick = function(){
-		var ele = leftDel(ul);
-		alert("删除"+ele.innerHTML);
+		 leftDel(ul);	
 	}
 	//为右侧出绑定事件
 	rightOut.onclick = function(){
-		var ele = rightDel(ul);
-		alert("删除"+ele.innerHTML);
-	}
+		rightDel(ul);
+	} 
 	//用事件委托，为 ul 下的所有 li 元素绑定事件
 	ul.addEventListener("click",function(event){
 		if(event.target && event.target.nodeName.toUpperCase() == "LI"){
