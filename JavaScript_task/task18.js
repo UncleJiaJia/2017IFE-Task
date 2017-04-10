@@ -8,7 +8,6 @@ function $(id){
 * 获取输入框里的值 值只能是数字,并创建节点的方法。
 * 
 */
-
 function leftDel(ele){//接受容器节点(父节点)
 	if(!ele.firstElementChild){
 		alert("没有节点可以删除")
@@ -25,30 +24,22 @@ function rightDel(ele){//接受容器节点(父节点)
 	
 }
 function leftInsert(parentEle,newEle){//接受父节点，新子节点;
-	if(! newEle){
-		return;
-	}
-	//如果存在第一个节点，就insert在第一个节点前面
-	if(parentEle.firstElementChild){
-		parentEle.insertBefore(newEle,parentEle.firstElementChild);
-	}
-	//如果不存在，就直接插入
-	else{
-		parentEle.appendChild(newEle);
-	}
+	if(! newEle){return;}
+	parentEle.insertBefore(newEle,parentEle.childNodes[0]);
+	
 }
 function rightInsert(parentEle,newEle){//接受父节点，新子节点;
 	if(! newEle){return;}
-	//不管wrap有没有存在字节点，插入的节点都在最后面，直接插入！
 	parentEle.appendChild(newEle);
 }
 function getInputValue(){//获取input里的value，限定文本类型
-	var value = $("input").value;
-	if(!value.match(/^(\d)*$/)){
+	var num = $("input").value;
+	$("input").value = null; //获取输入框里的值后，将其初始化；
+	if(!num.match(/^(\d)*$/)){
 		alert("请输入数字!");
 		return;
 	}
-	return value;
+	return num;
 }
 function createEle(num){//得到参数num，并将nm作为新节点的内容，创建新节点
 	if(!num){return;}
@@ -60,12 +51,13 @@ function createEle(num){//得到参数num，并将nm作为新节点的内容，�
 function addEvent(){
 	var ul = $("wrapQueue");
 	/*
-	   为什么没有 var leftIn = $("leftIn"); 获取leftIn元素. 
-	   左侧入按钮也能绑定事件
+	   为什么省略这一句 var leftIn = $("leftIn"); 没有获取leftIn元素. 
+	   leftIn.onclick也起作用！
 	   如果把leftIn 改成其他 名字，就不行了
-	   是不是只有leftIn 和相对应的 id名相匹配，省去获取元素这个步骤也可以
 
-	   好像是这样。但是如果名字中间加了‘-’就不行了，比如 left-in；
+	   是不是只有leftIn 和相对应的 id名相匹配，省去获取元素这个步骤也可以为该元素添加事件？
+
+	   好像是这样。但是如果 ID名字中间加了‘-’就不行了，比如 left-in；
 	   待定！
 	*/
 	//为左插入绑定函数；
