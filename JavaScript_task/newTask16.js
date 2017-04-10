@@ -20,8 +20,8 @@
 			     string.match(/\d/);
 		C：判断对象是否为空对象
 			JSON.stringify(aqiData) == "{}"；  true
-		D：事件委托！ 冒泡
-		E：dataset！
+		D：事件委托！ 冒泡 delegation
+		E：dataset！ dataset 是个DOMStringMap对象！
  */
  var aqiData = {};
  function $(ele){
@@ -84,12 +84,12 @@
 function init() {
 
   // 在这下面给add-btn绑定一个点击事件，点击时触发addBtnHandle函数
-  btn =  $("add-btn");
-  btn.onclick = addBtnHandle;
+  //btn =  $("add-btn");
+  addbtn.onclick = function(){addBtnHandle()};
   // 想办法给aqi-table中的所有删除按钮绑定事件，触发delBtnHandle函数
   var table =$("aqi-table");
   table.addEventListener("click",function(event){
-  	if (event.target.nodeName="button") {
+  	if (event.target && event.target.nodeName.toLowerCase() =="button") {
   		var attr = event.target.getAttribute("myattr");
   		delBtnHandle(attr);
   	}
