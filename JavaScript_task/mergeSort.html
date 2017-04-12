@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>merge sort</title>
+</head>
+<body>
+	<script>
+		var myarr = [12,2,25,2,4,15,30,8,5,133,87,23,10,50,60];
+		function mysort(arr){
+			if (arr.length == 1) {return arr;}
+			var mid = Math.ceil(arr.length/2);
+			var left = mysort(arr.slice(0,mid));
+			var right = mysort(arr.slice(mid));
+			return mergeArr(left,right);
+		}
+		function mergeArr(left,right){
+			var re = [];
+			while(left.length>0 && right.length>0){
+				if(left[0]<right[0]){
+					re.push(left.shift());
+				}
+				else{
+					re.push(right.shift());
+				}
+				
+			}
+			return re.concat(left).concat(right);
+		}
+
+		alert(myarr);
+		alert(mysort(myarr));
+
+	/*	function mysort(arr){
+			if(arr.length == 1)return arr;
+			var mid = Math.floor(arr.length/2);
+			var left = arr.slice(0,mid);
+			var right = arr.slice(mid);
+			return merge(mysort(left),mysort(right));
+		}
+		function merge(left,right){
+			var re = [];
+			while(left.length>0 && right.length>0){
+				if(left[0]<right[0]){
+					re.push(left.shift());
+				}
+				else{
+					re.push(right.shift());
+				}
+			}
+			return re.concat(left).concat(right);
+		}
+		*/
+	</script>
+</body>
+</html>

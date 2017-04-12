@@ -21,7 +21,7 @@ function rightDel(ele){//接受容器节点(父节点)
 		alert("没有节点可以删除")
 		return;
 	}
-	var num = ele.removeChild(ele.lastChild);
+	var num = ele.removeChild(ele.lastChild).innerHTML
 	alert("删除"+num);
 	
 }
@@ -46,6 +46,7 @@ function getInputValue(){//获取input里的value，限定文本类型
 function createEle(num){//得到参数num，并将nm作为新节点的内容，创建新节点
 	if(!num){return;}
 	var li = document.createElement("li");
+	li.style.height = num+ "%";
 	li.innerHTML = num;
 	return li;
 }
