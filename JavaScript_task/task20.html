@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>基础JavaScript练习（三）普通</title>
+	<style>
+		#wrapQueue{
+			height: 50px;
+			padding: 0;
+			display:flex;
+			align-items: flex-end;
+		}
+		li{
+			text-align: center;
+			padding: 5px;
+			display: inline-block;
+			margin-right: 5px;
+			margin-top: 5px;
+			color: #fff;
+			border: 1px solid red;
+			background: rgba(255,66,93,0.7);
+		}
+	</style>
+</head>
+<body>
+	<textarea type="text" id="input" cols = "30" rows= "6"></textarea>
+	<button id="leftIn">左侧入</button>
+	<button id="rightIn">右侧入</button>
+
+	<button id="leftOut">左侧出</button>
+	<button id="rightOut">右侧出</button>
+	<input type="text" id="searchArea">
+	<button id="search">查询</button>
+	<button id="reset">重置</button>
+	<div id = "wrapQueue"></div>
+
+	<script  src = "task20.js"></script>
+
+</body>
+</html>
