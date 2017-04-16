@@ -1,0 +1,76 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>遍历二叉树</title>
+	<style>
+		div{
+			display: flex;
+			flex-direction: row;
+			width:40%;
+			height: 80%;
+			justify-content: space-around;
+			align-items: center;
+			border: 1px solid black;
+			border-radius: 5px;
+			background: #F0F8FF;
+		}
+		#roote{
+			width:45%;
+			height: 250px;
+			margin: 0 auto;
+			
+		}
+		.buttonWrap{
+			border: none;
+			border-radius: 10px;
+			width: 60%;
+			margin: 0 auto;
+			margin-top: 20px;
+			background-color: #fff;
+		}
+		button{
+			background: rgb(13,136,255);
+			border: none;
+			width: 60px;
+			height: 35px;
+			color: white;
+			border-radius: 5px;
+		}
+		button:hover{
+			background-color: orange;
+			border: 1px solid rgb(13,136,255);
+		}
+	</style>
+</head>
+<body>
+	<div id="roote">
+		<div class="one">
+			<div class="two">
+				<div class="three"></div>
+				<div class="three"></div>
+			</div>
+			<div class="two">
+				<div class="three"></div>
+				<div class="three"></div>
+			</div>
+		</div>
+		<div class="one">
+			<div class="two">
+				<div class="three"></div>
+				<div class="three"></div>
+			</div>
+			<div class="two">
+				<div class="three"></div>
+				<div class="three"></div>
+			</div>
+		</div>
+	</div>
+	<div class="buttonWrap">
+		<button id="preorder">前序</button>
+		<button id="inorder">中序</button>
+		<button id="postoreder">后序</button>
+	</div>
+	<script src = "task22.js"></script>
+</body>
+</html>
