@@ -67,10 +67,10 @@ function showTrav(arr,value){
 				tag = true;
 				alertTag = true;
 			}
-			arr[i].style.background = "#aaa";
+			arr[i].style.background = "orange";
 		}
 		i++;
-	},250);
+	},400);
 }
 /*
 原始showTrav 函数
