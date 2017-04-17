@@ -1,0 +1,76 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>树的遍历 </title>
+	<style>
+	/*	#super{
+			height: 200px;		
+			width: 1060px;
+			margin: 0 auto;
+			background-color: #fff;
+		}*/
+		.tree div{
+			
+			margin: 10px;
+			display: flex;
+			flex: wrap;
+			justify-content: center;
+			align-items: center;
+			border: 1px solid black;
+			background-color: #fff;
+		}
+		.form{
+			text-align: center;
+			margin-bottom: 20px;
+		}
+		.f{
+			text-align: center;
+			margin-bottom: 20px;
+		}
+	</style>
+</head>
+<body>
+	<div class="form">
+		<button id="gbl">广度遍历</button>
+		<button id="sbl">深度遍历</button>
+		<input type="text" id="input">
+		<button id="search1">广度搜索</button>
+		<button id="search2">深度搜索</button>
+	</div>
+	<div class="f">
+		<button id = "del">删除节点</button>
+		<input type="text" id="addValue">
+		<button id= "add">增加节点</button>
+		<button id="re">重置背景颜色</button>
+	</div>
+	<!-- ——————————这是树————————-->
+	<div class="tree">
+		<div id="super" data = "Super"> Super
+		<div id="cat" data = "Cat">Cat
+			<div id="apple" data = "Apple">Apple</div>
+			<div id="phone" data = "Phone">Phone</div>
+			<div data="nothing">
+				<div id="book" data = "Book">Book</div>
+				<div id="school" data = "School">School</div>
+			</div>
+		</div>
+		<div id="note" data = "Note">Note
+			<div id = "human" data = "Human">Human
+				<div id="code" data = "Code">Code</div>
+				<div id="operate" data = "Operate">Operate</div>
+				<div id="man" data = "Man">Man</div>
+			</div>
+			<div id="program" data = "program">Program
+				<div id="bement" data = "Bement">Bement
+					<div id="cat" data = "Cat">Cat</div>
+				</div>
+				<div id="glass" data = "Glass">Glass</div>
+			</div>
+		</div>
+		<div id="fish" data = "Fish">Fish</div>
+	</div>
+	</div>
+	<script src = "task24.js"></script>
+</body>
+</html>
