@@ -6,10 +6,10 @@ var curNode; //鼠标点击的当前元素；
 function traverseDF(node){
 	order = [];
 	(function recurse(currentNode){
+		order.push(currentNode);
 		for(var i = 0,len = currentNode.children.length; i< len;i++){
 			recurse(currentNode.children[i]);
 		}
-		order.push(currentNode);
 	})(node);
 }
 //广度优先搜索
