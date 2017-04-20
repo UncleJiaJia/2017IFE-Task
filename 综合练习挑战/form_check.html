@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>表单验证</title>
+	<style>
+		p{
+			margin-top: 0px;
+			margin-left: 57px;
+			color: grey;
+			opacity: 0.5;
+			font-size: 14px;
+		}
+		input{
+			border-radius: 3px;
+			border: 2px solid grey;
+			margin-left: 20px;
+			margin-right: 15px;
+			width: 220px;
+			padding: 8px;
+			font-size: 20px;
+		}
+		input:focus{
+			
+			border-color: none;
+		}
+		button{
+			height: 40px;
+			width: 60px;
+			border: 0px solid black;
+			background-color: rgb(47,121,186);
+			border-radius: 5px;
+			color: #FFF;
+		}
+	</style>
+</head>
+<body>
+	
+		<label for="input">名称</label>
+		<input type="text" id="input" name ="name">
+		<button id="check">验证</button>
+		<p id="ts">必填，长度为4-16个字符</p>
+	
+	<script src = "form_check.js"></script>
+</body>
+</html>
