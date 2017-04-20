@@ -126,7 +126,7 @@ function handleL(ele,fn,num){
 	var num = fn(value);
 	changeBT(ele,num);
 }
-input.addEventListener("blur",function(){
+input.addEventListener("blur",function(event){
 	//获取框内值
 	/*var value = event.target.value;
 	//检查框内值，返回 检查结果
@@ -135,25 +135,25 @@ input.addEventListener("blur",function(){
 	changeBT(event.target,num);*/
 	handleL(event.target,checkName);
 });
-psw.addEventListener("blur",function(){
+psw.addEventListener("blur",function(event){
 	/*var value = event.target.value;
 	var num = checkpwd(value);
 	changeBT(event.target,num);*/
 	handleL(event.target,checkpsw);
 });
-rpsw.addEventListener("blur",function(){
+rpsw.addEventListener("blur",function(event){
 	/*var value = event.target.value;
 	var num = checkRpsw(value);
 	changeBT(event.target,num);*/
 	handleL(event.target,checkRpsw);
 });
-mail.addEventListener("blur",function(){
+mail.addEventListener("blur",function(event){
 	/*var value = event.target.value;
 	var num = checkMail(value);
 	changeBT(event.target,num);*/
 	handleL(event.target,checkMail);
 });
-pnum.addEventListener("blur",function(){
+pnum.addEventListener("blur",function(event){
 	/*var value = event.target.value;
 	var num = checkTelNum(value);
 	changeBT(event.target,num);*/
