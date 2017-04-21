@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>表三-联动</title>
+	<style>
+		form{
+			margin-top: 150px;
+			text-align: center;
+			font-size: 20px;
+		}
+		select{
+			appearance:none;
+			-moz-appearance:none;
+		              -webkit-appearance:none;
+			width: 150px;
+			padding: 5px;
+			padding-left: 13px;
+			font-size: 18px;
+			border: 2px solid rgb(204,204,204);
+		}
+		#wrap2{
+			margin-top: 10px;
+		}
+		#wrap1{
+			margin-top: 10px;
+		}
+		input[type="text"]{
+			width: 255px;
+			font-size: 18px;
+			padding: 5px;
+			text-align: center;
+			border: 2px solid rgb(204,204,204);
+		}
+	</style>
+</head>
+<body>
+	<form action="">
+		<label for="inSchool">在校生</label>
+		<input type="radio" id="inSchool" value="在校生" name="st" checked="checked">
+		<label for="outSchool">非在校生</label>
+		<input type="radio" id="outSchool" value="非在校生" name="st">
+		<div id ="wrap1" style="display: none">
+			<label for="school">学校</label>
+			<select name="city" id="city">
+				<option value="广州" selected="selected">广州</option>
+				<option value="北京">北京</option>
+				<option value="上海">上海</option>
+			</select>
+			<select name="college" id="school">
+				<option value="中山大学">中山大学</option>
+				<option value="广东金融学院">广东金融学院</option>
+				<option value="暨南大学">暨南大学</option>
+				<option value="华南农业大学">华南农业大学</option>
+			</select>
+		</div>
+		<div id="wrap2" style="display: none">
+			<label for="workPlace">就业单位</label>
+			<input type="text" id="workPlace">
+		</div>
+	</form>
+	<script src = "form3.js"></script>
+</body>
+</html>
