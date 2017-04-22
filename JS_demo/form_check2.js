@@ -16,7 +16,7 @@ var psw = $("psw");
 var rpsw = $("rpsw");
 var mail = $("mail");
 var pnum = $("pnum");
-function checkName(str){
+/*function checkName(str){
 	var re2 = /[a-zA-Z\u4e00-\u9fa5]{4,}/;
 	var re =  /[a-zA-Z\u4e00-\u9fa5]{17,}/;
 	if (!str) {
@@ -26,6 +26,20 @@ function checkName(str){
 		return 2;
 	}
 	return 1;
+}*/
+function checkName(str){	
+	if(str==null){
+		return 0;
+	}else{
+		// 0x00-0xff 是英文utf-16编码？
+		var re = /[^x00-xff]/g;
+		str = str.replace(re,"aa");
+		if(4<=str.length && str.length<=16){
+			return 1;
+		}else{
+			return 2;
+		}
+	}
 }
 function checkpsw(str){
 	var re = /[a-zA-Z\d]{6,}/;
