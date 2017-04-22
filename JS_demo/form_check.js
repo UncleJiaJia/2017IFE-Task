@@ -26,16 +26,25 @@ function getValue(eleid){
 		return e.value;
 	}
 }
+function checkLength(str){	
+	if(str==null){
+		return 0;
+	}else{
+		// 0x00-0xff 是英文utf-16编码？
+		var re = /[^x00-xff]/g;
+		str = str.replace(re,"aa");
+		if(4<=str.length && str.length<=16){
+			return 1;
+		}else{
+			return 2;
+		}
+	}
+	
+}
+/*
 function checknum(str){
-	/*
-	如果str为空，返回0
-	如果字符数为4-16
-		分割字符串成数组，循环数组，判断数组里每个值的长度
-		如果值的类型是英文字母、数字、英文符号，但是长度不是1，则返回1
-		如果值的类型是汉字，但是长度
-	*/
-	var re2 = /[a-zA-Z\u4e00-\u9fa5]{4,}/;
-	var re =  /[a-zA-Z\u4e00-\u9fa5]{17,}/;
+	var re2 = /[a-zA-Z\u4e00-\u9fa5]/;
+	var re =  /[a-zA-Z\u4e00-\u9fa5]/;
 	if (str == null) {
 		return 0;
 	}
@@ -43,9 +52,8 @@ function checknum(str){
 		return 2;
 	}
 	return 1;
+}*/
 
-
-}
 function changeBT(num){
 	switch(num){
 		case 0:
@@ -64,6 +72,6 @@ function changeBT(num){
 }
 check.addEventListener("click",function(){
 	var value = getValue("input");
-	var rbNum = checknum(value);
+	var rbNum = checkLength(value);
 	changeBT(rbNum);
 });
