@@ -30,7 +30,7 @@ function  changeRotate(ele,deg){//传入元素 和 要该元素要旋转的度�
 	}
 	else{
 		var str = ele.style.transform
-		var olddeg = str.match(/\d/g).join("")/1;
+		var olddeg = str.match(/\-?\d/g).join("")/1;//匹配原来的角度数
 		var newdeg = olddeg+deg;
 		if (newdeg>360) {
 			newdeg -=360;
@@ -87,7 +87,7 @@ go.onclick = function(){
 	}
 	switch(value){
 		case 'TUN LEF':
-			direction = changeRotate(lsq,270);
+			direction = changeRotate(lsq,-90);
 			break;
 		case 'TUN RIG':
 			direction = changeRotate(lsq,90);
@@ -109,3 +109,6 @@ tleft.onclick = function(){
 goahead.onclick = function(){
 	movelsq(lsq,direction);
 }
+/*
+	可以考虑用背景图、svg 、canvas等来实现格子图
+*/
